@@ -1,7 +1,7 @@
 #  footprint of the tractor case_ih_7210_pro
 footprint: [[-2.2, -1.2], [-2.2, 1.2], [2.2, 1.2], [2.2, -1.2]]
 footprint_padding: 0.1
-robot_base_frame: base_link
+robot_base_frame: lizard_caterpillar_836k_landfill_eiffage_18/base_link
 update_frequency: 6.0
 publish_frequency: 4.0
 transform_tolerance: 0.5
@@ -23,7 +23,7 @@ static:
 obstacles_laser:
     observation_sources: laser
     laser: {
-      topic: scan,
+      topic: lizard_caterpillar_836k_landfill_eiffage_18/scan,
       data_type: LaserScan,
       clearing: true,
       marking: true,
