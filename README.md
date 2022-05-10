@@ -25,7 +25,7 @@ If that's not the case, adjust paths where necessary.
 mkdir -p $HOME/catkin_fs/src
 
 # clone fs_mod_ros into Catkin src space
-git clone https://github.com/tud-cor/fs_mod_ros $HOME/catkin_fs/src/fs_mod_ros
+git clone https://github.com/Helgen-Tech/fs_mod_ros $HOME/catkin_fs/src/fs_mod_ros
 
 # install all dependencies
 source /opt/ros/melodic/setup.bash
