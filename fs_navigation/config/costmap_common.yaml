@@ -4,7 +4,7 @@ footprint_padding: 0.1
 robot_base_frame: lizard_caterpillar_836k_landfill_eiffage_18/base_link
 update_frequency: 6.0
 publish_frequency: 4.0
-transform_tolerance: 0.5
+transform_tolerance: 1
 
 resolution: 0.05
 

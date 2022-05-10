@@ -4,7 +4,7 @@ recovery_behaviour_enabled: true
 # global planner params
 NavfnROS:
   allow_unknown: true # Specifies whether or not to allow navfn to create plans that traverse unknown space.
-  default_tolerance: 0.1 # A tolerance on the goal point for the planner.
+  default_tolerance: 0.2 # A tolerance on the goal point for the planner.
 
 # local planner params
 TebLocalPlannerROS:
@@ -28,34 +28,31 @@ TebLocalPlannerROS:
 
  # Robot
 
- max_vel_x: 0.28
- max_vel_x_backwards: 0.18
+ max_vel_x: 5
+ max_vel_x_backwards: 2.5
  max_vel_y: 0.0
- max_vel_theta: 0.7 # the angular velocity is also bounded by min_turning_radius in case of a carlike robot (r = v / omega)
- acc_lim_x: 3
- acc_lim_theta: 1.5
+ max_vel_theta: 1 # the angular velocity is also bounded by min_turning_radius in case of a carlike robot (r = v / omega)
+ acc_lim_x: .5
+ acc_lim_theta: .1
 
  # ********************** Carlike robot parameters ********************
- min_turning_radius: 0.8        # Min turning radius of the carlike robot (compute value using a model or adjust with rqt_reconfigure manually)
- wheelbase: 0.4                 # Wheelbase of our robot
+ min_turning_radius: 15        # Min turning radius of the carlike robot (compute value using a model or adjust with rqt_reconfigure manually)
+ wheelbase: 9                 # Wheelbase of our robot
  cmd_angle_instead_rotvel: True # stage simulator takes the angle instead of the rotvel as input (twist message)
  # ********************************************************************
 
  footprint_model: # types: "point", "circular", "two_circles", "line", "polygon"
-   type: "polygon"
-   radius: 0.2 # for type "circular"
+   type: "two_circles"
    line_start: [0.0, 0.0] # for type "line"
    line_end: [0.4, 0.0] # for type "line"
-   front_offset: 0.2 # for type "two_circles"
-   front_radius: 0.2 # for type "two_circles"
-   rear_offset: 0.2 # for type "two_circles"
-   rear_radius: 0.2 # for type "two_circles"
-   vertices: [ [0.55, -0.3], [0.5, -0.25], [0.5, -0.28], [-0.5, -0.25], [-0.55, 0], [5, 0.25], [0.5, 0.28], [0.5, 0.25], [0.55, 0.3] ] # for type "polygon"
-
+   front_offset: 4 # for type "two_circles"
+   front_radius: 2.5 # for type "two_circles"
+   rear_offset:  4 # for type "two_circles"
+   rear_radius: 2.5 # for type "two_circles"
  # GoalTolerance
 
- xy_goal_tolerance: 0.5
- yaw_goal_tolerance: 0.5
+ xy_goal_tolerance: 1
+ yaw_goal_tolerance: 1
  free_goal_vel: False
  complete_global_plan: True
 
