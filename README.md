@@ -35,6 +35,9 @@ rosdep install -i --from-paths $HOME/catkin_fs/src
 # Most likely the TEB local planner package has to be installed separately
 sudo apt-get install ros-$ROS_DISTRO-teb-local-planner
 
+# Catkin tools do not seem to be installed by default in a fresh ROS installation
+sudo apt-get install ros-$ROS_DISTRO-catkin python-catkin-tools
+
 # build the workspace
 catkin config --install -w $HOME/catkin_fs
 catkin build -w $HOME/catkin_fs
