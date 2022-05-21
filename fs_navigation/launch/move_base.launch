@@ -13,7 +13,7 @@
 
     <!-- load global & local plannars parameters -->
     <rosparam file="$(find fs_navigation)/config/planner.yaml" command="load"/>
-    <param name="controller_frequency" value="5.0"/>
+    <param name="controller_frequency" value="10.0"/>
     <param name="controller_patience" value="15.0"/>
     <!-- cars/tractors are not able to rotate in place -->
     <param name="clearing_rotation_allowed" value="false" />
@@ -27,8 +27,8 @@
 
     <!-- local costmap, needs size -->
     <rosparam file="$(find fs_navigation)/config/costmap_local.yaml" command="load" ns="local_costmap" />
-    <param name="local_costmap/width" value="30.0"/>
-    <param name="local_costmap/height" value="30.0"/>
+    <param name="local_costmap/width" value="50.0"/>
+    <param name="local_costmap/height" value="50.0"/>
 
     <!-- static global costmap, getting the map from gmapping-->
     <rosparam file="$(find fs_navigation)/config/costmap_global_static.yaml" command="load" ns="global_costmap" if="$(arg static_map)"/>

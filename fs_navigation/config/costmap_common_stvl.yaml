@@ -17,7 +17,7 @@ rgbd_obstacle_layer:
   publish_voxel_map:     true   # default off
   transform_tolerance:   5    # seconds !!!!!!!!!!
   mapping_mode:          false  # default off, saves map not for navigation
-  map_save_duration:     60     #default 60s, how often to autosave
+  map_save_duration:     10     #default 60s, how often to autosave
   observation_sources:   rgbd1_clear rgbd1_mark
   rgbd1_mark:
     data_type: PointCloud2

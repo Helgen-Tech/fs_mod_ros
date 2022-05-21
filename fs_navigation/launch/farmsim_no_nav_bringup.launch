@@ -5,7 +5,8 @@
   <!-- launch an assembler operating on topic scan in the base_link frame, with a buffer of 400 -->
   <node type="laser_scan_assembler" pkg="laser_assembler" name="my_assembler">
     <param name="max_scans" type="int" value="400" />
-    <param name="fixed_frame" type="string" value="base_link" />
+    <!--<param name="fixed_frame" type="string" value="lizard_caterpillar_836k_landfill_eiffage_12/base_link" /> -->
+    <param name="fixed_frame" type="string" value="nmc_d_11_bulldozer_12/base_link" />
   </node>
 
   <!-- call the assemble_scans2 service to assemble the multi-layer laser scan data into a point cloud and publish the assembled point cloud-->
