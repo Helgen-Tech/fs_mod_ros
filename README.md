@@ -50,9 +50,25 @@ source $HOME/catkin_fs/install/setup.bash
 ## Running
 #### Steps for running ROS navigation stack:
 
+Note: In order for the roscore to be visible throughout the network, the ROS_MASTER_URI and ROS_IP environment variables must be set to appropriate settings depending on the network scheme. For example:
+
+```sh
+
+export ROS_MASTER_URI=http://XXX.XXX.XXX.XXX:11311
+export ROS_IP=XXX.XXX.XXX.XXX
+
+# Add the new variables to ~/.bashrc, so it'll be exported every time you open up a new terminal.
+source ~/.basrhc
+
+```
+
+The IP's can be set as static on the host computer or configured directly on the router settings.
+
 In one terminal:
 
 ```sh
+
+# If no changes have been made and the catkin package has not been rebuilt, this can also be added to ~/.bashrc
 source ~/catkin_fs/install/setup.bash
 
 # launch the main entrypoint to running a simulated world within FarmSim
