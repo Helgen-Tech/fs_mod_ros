@@ -50,12 +50,12 @@ source $HOME/catkin_fs/install/setup.bash
 ## Running
 #### Steps for running ROS navigation stack:
 
-Note: In order for the roscore to be visible throughout the network, the ROS_MASTER_URI and ROS_IP environment variables must be set to appropriate settings depending on the network scheme. For example:
+Note: In order for the roscore to be visible throughout the network, the ROS_MASTER_URI and ROS_IP environment variables must be set to appropriate settings depending on the network scheme (and a relatively fast router is needed in order to prevent bottlenecks). For example:
 
 ```sh
 
-export ROS_MASTER_URI=http://XXX.XXX.XXX.XXX:11311
-export ROS_IP=XXX.XXX.XXX.XXX
+export ROS_MASTER_URI=http://10.42.8.9:11311
+export ROS_IP=10.42.8.9
 
 # Add the new variables to ~/.bashrc, so it'll be exported every time you open up a new terminal.
 source ~/.basrhc
